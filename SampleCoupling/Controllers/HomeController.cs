@@ -1,4 +1,5 @@
 ﻿using SampleCoupling.Models;
+using SampleCoupling.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,7 +16,7 @@ public class HomeController : Controller
 
     public HomeController()
     {
-        _bookRepository = new BookRepository();
+        _bookRepository = new LinqToSqlBookRepository();
     }
 
     public ActionResult Books()
